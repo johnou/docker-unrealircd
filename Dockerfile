@@ -1,6 +1,6 @@
 FROM debian:jessie
-ENV UNREAL_VERSION="4.0.3" \
-    ANOPE_VERSION="2.0.3" \
+ENV UNREAL_VERSION="4.0.10" \
+    ANOPE_VERSION="2.0.5" \
     TERM="vt100" \
     LC_ALL=C
 RUN apt-get update \
