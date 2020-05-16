@@ -1,6 +1,6 @@
-FROM debian:jessie
-ENV UNREAL_VERSION="4.0.10" \
-    ANOPE_VERSION="2.0.5" \
+FROM debian:stretch
+ENV UNREAL_VERSION="4.2.4.1" \
+    ANOPE_VERSION="2.0.7" \
     TERM="vt100" \
     LC_ALL=C
 RUN apt-get update \
