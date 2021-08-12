@@ -1,0 +1,30 @@
+version: "3.4"
+
+services:
+
+  ircd:
+    build:
+      network: host
+      context: .
+      dockerfile: ./Dockerfile.ircd
+    volumes: 
+      - /opt/docker/unrealircd/ssl:/home/ircd/unrealircd/conf/tls
+      - /opt/docker/unrealircd/unrealircd.conf:/home/ircd/unrealircd/conf/unrealircd.conf
+    hostname: irc.hellface.com
+    ports:
+      - "127.0.0.1:6900:6900"
+      - "6697:6697"
+      - "6667:6667"
+    depends_on:
+      - irc-services
+
+  irc-services:
+    build:
+      network: host
+      context: .
+      dockerfile: ./Dockerfile.services
+    volumes: 
+      - /opt/docker/unrealircd/services/data:/home/ircd/unrealircd/services/data
+      - /opt/docker/unrealircd/services/conf:/home/ircd/unrealircd/services/conf
+    hostname: services.hellface.com
+

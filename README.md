@@ -5,12 +5,7 @@ Container
 ------
 
 ```
-docker stop unrealircd
-docker rm unrealircd
-
-docker build -t unrealircd .
-
-docker run --restart=always --name unrealircd -p 6697:6697 -p 6667:6667 -d -v /opt/docker/unrealircd/ssl:/home/ircd/unrealircd/conf/ssl -v /opt/docker/unrealircd/unrealircd.conf:/home/ircd/unrealircd/conf/unrealircd.conf -v /opt/docker/unrealircd/services/data:/home/ircd/unrealircd/services/data -v /opt/docker/unrealircd/services/conf:/home/ircd/unrealircd/services/conf unrealircd
+docker-compose up --force-recreate --build --remove-orphans
 ```
 
 

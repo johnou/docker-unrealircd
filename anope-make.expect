@@ -19,7 +19,7 @@ expect "What should the default umask for data files be (in octal)?"
 send "007\r" 
 
 expect "Would you like to build a debug version of Anope?"
-send "n\r" 
+send "n\r"
 
 expect "Do you want to build using precompiled headers?"
 send "n\r" 
@@ -42,10 +42,8 @@ send "n\r"
 expect "If you need no extra include directories, enter NONE in all caps."
 send "NONE\r"
 
-
 expect "If you need no extra library directories, enter NONE in all caps."
 send "NONE\r"
-
 
 expect "If you need no extra arugments to CMake, enter NONE in all caps."
 send "NONE\r"
