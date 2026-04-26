@@ -1,12 +1,13 @@
-FROM debian:stretch
-ENV UNREAL_VERSION="5.2.1.1" \
+FROM debian:bookworm-slim
+ENV UNREAL_VERSION="6.2.3" \
     TERM="vt100" \
     LC_ALL=C
 RUN apt-get update \
  && apt-get upgrade -y \
  && apt-get install -y --no-install-recommends \
-    ca-certificates wget build-essential curl cmake file expect libssl-dev \
-    supervisor vim gnupg dirmngr \
+    ca-certificates wget build-essential pkg-config curl cmake file libssl-dev \
+    libpcre2-dev libargon2-dev libsodium-dev libc-ares-dev libcurl4-openssl-dev \
+    supervisor vim gnupg dirmngr python3 \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir -p /var/log/supervisor
 
