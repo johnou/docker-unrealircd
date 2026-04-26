@@ -8,7 +8,7 @@ if ! [[ $UNREAL_VERSION =~ $rx ]]; then
 fi
 
 wget https://www.unrealircd.org/downloads/unrealircd-$UNREAL_VERSION.tar.gz{,.asc}
-gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xA7A21B0A108FF4A9
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36E6F65706E36B0937280299101001DAF48BB56D
 gpg --verify unrealircd-$UNREAL_VERSION.tar.gz.asc unrealircd-$UNREAL_VERSION.tar.gz
 tar zxvf unrealircd-$UNREAL_VERSION.tar.gz
 cd unrealircd-$UNREAL_VERSION
