@@ -1,6 +1,6 @@
 FROM debian:bookworm-slim
-ENV ANOPE_VERSION="2.0.19" \
-    ANOPE_CHECKSUM="9b13854a210b3d07d96de380f35e033450ea7c9441af8100d8d8dccdb9e8154b" \
+ENV ANOPE_VERSION="2.0.20" \
+    ANOPE_CHECKSUM="646cc6d24dea62fac54285780ebb05ad794a3dbabe6aca1ae6c69a939b0a0734" \
     TERM="vt100" \
     LC_ALL=C
 RUN apt-get update \
