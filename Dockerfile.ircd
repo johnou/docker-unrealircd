@@ -1,5 +1,5 @@
 FROM debian:bookworm-slim
-ENV UNREAL_VERSION="6.2.7" \
+ENV UNREAL_VERSION="6.2.7.1" \
     TERM="vt100" \
     LC_ALL=C
 RUN apt-get update \
